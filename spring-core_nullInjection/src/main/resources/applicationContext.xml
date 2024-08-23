@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="102" />
+		<property name="month" value="1" />
+		<property name="date" value="19" />
+	</bean>
+	<bean id="doj" class="java.util.Date">
+		<property name="year" value="124" />
+		<property name="month" value="5" />
+		<property name="date" value="3" />
+	</bean>
+
+	<bean id="dom" class="java.util.Date" />
+
+
+	<bean id="personInfo" class="in.app.bean.PersonInfo">
+		<constructor-arg name="pNo" value="7" />
+		<constructor-arg name="pName" value="Dhoni" />
+		<constructor-arg name="dob" ref="dob" />
+		<constructor-arg name="doj" ref="doj" />
+		<constructor-arg name="dom" ref="dom" />
+	</bean>
+
+	<bean id="personInfo2" class="in.app.bean.PersonInfo">
+		<constructor-arg value="45" />
+		<constructor-arg value="Rohit" />
+		<constructor-arg name="dob">
+			<null />
+		</constructor-arg>
+		<constructor-arg name="doj">
+			<null />
+		</constructor-arg>
+		<constructor-arg ref="dom" />
+	</bean>
+
+
+
+</beans>

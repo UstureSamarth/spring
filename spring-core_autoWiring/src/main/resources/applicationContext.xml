@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="bdart" class="in.app.bean.Bluedart" /> <bean id="c" class="in.app.bean.DTDC" 
+		/> <bean id="ff" class="in.app.bean.Firstflight" /> <bean id="flipkart" class="in.app.bean.Flipkart" 
+		autowire="byName" /> -->
+
+	<!-- <bean id="bdart" class="in.app.bean.Bluedart" primary="true"/> <bean 
+		id="dtdc" class="in.app.bean.DTDC" /> <bean id="ff" class="in.app.bean.Firstflight" 
+		/> <bean id="flipkart" class="in.app.bean.Flipkart" autowire="byType" /> -->
+
+	<bean id="bdart" class="in.app.bean.Bluedart" />
+	<bean id="dtdc" class="in.app.bean.DTDC" />
+	<bean id="courier" class="in.app.bean.Firstflight" />
+
+	<bean id="flipkart" class="in.app.bean.Flipkart"
+		autowire="constructor" />
+
+</beans>

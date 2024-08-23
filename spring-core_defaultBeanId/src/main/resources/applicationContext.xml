@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="baseYear" class="in.app.bean.EngCourse" abstract="true">
+		<property name="subjects">
+			<set>
+				<value>Physics</value>
+				<value>Chemistry</value>
+				<value>Mathematics</value>
+			</set>
+		</property>
+	</bean>
+	<bean  class="in.app.bean.EngCourse">
+		<property name="subjects">
+			<set>
+				<value>C</value>
+				<value>EM</value>
+				<value>CP</value>
+			</set>
+		</property>
+	</bean>
+	<bean  class="in.app.bean.EngCourse">
+		<property name="subjects">
+			<set>
+				<value>Java</value>
+				<value>DS</value>
+				<value>IOT</value>
+			</set>
+		</property>
+	</bean>
+
+</beans>
